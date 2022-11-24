@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style>
+			* {
+				margin: 0 auto;
+				padding: 0;
+			}
+
+			div {
+				width: 1000px;
+				height: 800px;
+				background-color: antiquewhite;
+				background-image: url("img/1.jpg");
+			}
+
+			ul {
+				background-color: red;
+				list-style: none;
+				position: relative;
+				top: 750px;
+				display: flex;
+				width: 220px;
+			}
+
+			li {
+				float: left;
+				width: 40px;
+				height: 40px;
+				background-color: black;
+				color: white;
+				border-radius: 50%;
+				text-align: center;
+				line-height: 40px;
+			}
+
+			li:hover {
+				background-color: red;
+				cursor: pointer;
+			}
+
+			@keyframes pic {
+				20% {
+					background-image: url("img/1.jpg");
+				}
+
+				40% {
+					background-image: url("img/2.jpg");
+				}
+
+				60% {
+					background-image: url("img/3.jpg");
+				}
+
+				80% {
+					background-image: url("img/4.jpg");
+				}
+
+				100% {
+					background-image: url("img/5.jpg");
+				}
+			}
+		</style>
+	</head>
+	<body>
+		<div id="pic">
+			<ul>
+				<li onclick="click1(1)">1</li>
+				<li onclick="click1(2)">2</li>
+				<li onclick="click1(3)">3</li>
+				<li onclick="click1(4)">4</li>
+				<li onclick="click1(5)">5</li>
+			</ul>
+		</div>
+		<script>
+			function click1(n) {
+				switch (n) {
+					case 1:
+						document.getElementById("pic").style.backgroundImage = "url('img/1.jpg')";
+						break;
+					case 2:
+						document.getElementById("pic").style.backgroundImage = "url('img/2.jpg')";
+						break;
+					case 3:
+						document.getElementById("pic").style.backgroundImage = "url('img/3.jpg')";
+						break;
+					case 4:
+						document.getElementById("pic").style.backgroundImage = "url('img/4.jpg')";
+						break;
+					case 5:
+						document.getElementById("pic").style.backgroundImage = "url('img/5.jpg')";
+						break;
+				}
+			}
+		</script>
+</html>
